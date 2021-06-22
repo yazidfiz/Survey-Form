@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
+    <!-- additional css -->
+    <style>
+      .container-fluid {
+        background-image: url(https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1852&q=80);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+
+      form {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 2rem;
+        border-radius: 0.5rem;
+        font-size: large;
+      }
+
+      .container-fluid {
+        color: white;
+      }
+
+      header h1 {
+        text-shadow: 0, 0, 10px, 2px;
+      }
+    </style>
+
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <!-- =========================== start title =========================== -->
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row justify-content-center pt-5">
+          <div class="col">
+            <header class="header">
+              <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+              <p id="description" class="description text-center">Thank you for taking the time to help us improve the platform</p>
+            </header>
+          </div>
+        </div>
+      </div>
+      <!-- =========================== end title =========================== -->
+
+      <!-- =========================== start form =========================== -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <form id="survey-form">
+              <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+              </div>
+              <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+              </div>
+              <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+              </div>
+              <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                  <option disabled selected value>Select current role</option>
+                  <option value="student">Student</option>
+                  <option value="job">Full Time Job</option>
+                  <option value="learner">Full Time Learner</option>
+                  <option value="preferNo">Prefer not to say</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <label class="d-block"> <input name="user-recommend" value="definitely" type="radio" class="input-radio mr-1" checked />Definitely</label>
+                <label class="d-block"> <input name="user-recommend" value="maybe" type="radio" class="input-radio mr-1" />Maybe</label>
+
+                <label class="d-block"><input name="user-recommend" value="not-sure" type="radio" class="input-radio mr-1" />Not sure</label>
+              </div>
+
+              <div class="form-group">
+                <p>What is your favorite feature of freeCodeCamp?</p>
+                <select id="most-like" name="mostLike" class="form-control" required>
+                  <option disabled selected value>Select an option</option>
+                  <option value="challenges">Challenges</option>
+                  <option value="projects">Projects</option>
+                  <option value="community">Community</option>
+                  <option value="openSource">Open Source</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <p>
+                  What would you like to see improved?
+                  <span class="clue">(Check all that apply)</span>
+                </p>
+
+                <label class="d-block"><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox mr-1" />Front-end Projects</label>
+                <label class="d-block mr-1"> <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox mr-1" />Back-end Projects</label>
+                <label class="d-block mr-1"><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox mr-1" />Data Visualization</label>
+                <label class="d-block mr-1"><input name="prefer" value="challenges" type="checkbox" class="input-checkbox mr-1" />Challenges</label>
+                <label class="d-block mr-1"><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox mr-1" />Open Source Community</label>
+                <label class="d-block mr-1"><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox mr-1" />Gitter help rooms</label>
+                <label class="d-block mr-1"><input name="prefer" value="videos" type="checkbox" class="input-checkbox mr-1" />Videos</label>
+                <label class="d-block mr-1"><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox mr-1" />City Meetups</label>
+                <label class="d-block mr-1"><input name="prefer" value="wiki" type="checkbox" class="input-checkbox mr-1" />Wiki</label>
+                <label class="d-block"><input name="prefer" value="forum" type="checkbox" class="input-checkbox mr-1" />Forum</label>
+                <label class="d-block"><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox mr-1" />Additional Courses</label>
+              </div>
+              <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" class="input-textarea d-block" name="comment" placeholder="Enter your comment here..." style="width: 100%; height: 8rem"></textarea>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" id="submit" class="btn btn-primary d-block" style="width: 100%">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================== end form =========================== -->
+  </body>
+</html>
